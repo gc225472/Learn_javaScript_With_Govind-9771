@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Example</title>
+</head>
+<body></body>
+<script>
+   const div = document.createElement("div");
+   div.className = "container";
+   div.id = "0.0213";
+   div.style.color = "red";
+   //div.textContent = "This is a dynamically created div.";
+ // textContent returns all text including hidden content, while innerText returns only visible text and respects CSS styling.
+ 
+const addtext = document.createTextNode("This is a dynamically created div.")
+   div.appendChild(addtext)
+   document.body.appendChild(div);
+</script>
+</html>
