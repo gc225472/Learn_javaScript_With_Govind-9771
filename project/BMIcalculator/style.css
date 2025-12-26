@@ -1,0 +1,33 @@
+.cnmtainer{
+    display:flex;
+}
+
+h1{
+    text-align: center;
+    background-color: rgb(144, 123, 123);
+}
+.nav-bar{
+    background-color: #454141;
+    overflow: hidden;
+    margin : 20px 0px 20px 0px;
+    display: flex;
+    text-align: center;
+    justify-content:center;
+}
+.nav-bar a{
+    float: left;
+    color: #f2f2f2;
+    
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav-bar a:hover{
+    background-color: #ddd;
+    color: black;
+}
+#result {
+height :30px;
+width: 30px
+
+}
+ 

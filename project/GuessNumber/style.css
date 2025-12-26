@@ -1,0 +1,245 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1f4037, #0f2027);
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ================= NAV BAR ================= */
+#nav-bar {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 14px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+#nav-bar a {
+  color: #ffffff;
+  text-decoration: none;
+  height:200px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+/* Glow hover */
+#nav-bar a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.35s ease;
+}
+
+#nav-bar a:hover::after {
+  opacity: 1;
+}
+
+#nav-bar a:hover {
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* ================= WRAPPER ================= */
+#wrapper {
+  margin: auto;
+  margin-right:30% ;
+  width: 420px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Heading */
+#wrapper h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+#wrapper p {
+  font-size: 14px;
+  color: #dcdcdc;
+  margin-bottom: 10px;
+}
+
+/* ================= RESULT BOX ================= */
+.resultParas {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 242, 254, 0.15),
+    rgba(79, 172, 254, 0.15)
+  );
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Text */
+.resultParas p {
+  font-size: 15px;
+  margin: 8px 0;
+}
+
+/* Highlights */
+.guesses {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.lastResult {
+  color: #00ff99;
+  font-weight: 600;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+  #wrapper {
+    width: 90%;
+    padding: 24px;
+  }
+
+  #nav-bar {
+    gap: 20px;
+  }
+
+  #nav-bar a {
+    font-size: 14px;
+  }
+}
+/* ================= FORM ================= */
+.form {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Label */
+#guess {
+  font-size: 15px;
+  font-weight: 500;
+  color: #00f2fe;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Input Field */
+.guessField {
+  padding: 12px 15px;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+  box-shadow:
+    inset 0 0 8px rgba(255, 255, 255, 0.1),
+    0 6px 18px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Placeholder (optional) */
+.guessField::placeholder {
+  color: #cccccc;
+}
+
+/* Input focus effect */
+.guessField:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 0 0 2px rgba(0, 242, 254, 0.6),
+    0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Submit Button */
+.guessSubmit {
+  margin-top: 5px;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #000;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  box-shadow:
+    0 10px 25px rgba(79, 172, 254, 0.6);
+  transition: all 0.35s ease;
+}
+
+/* Button hover */
+.guessSubmit:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 15px 35px rgba(79, 172, 254, 0.8);
+}
+
+/* Button click */
+.guessSubmit:active {
+  transform: translateY(0);
+  box-shadow:
+    0 6px 15px rgba(79, 172, 254, 0.5);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+  .guessField {
+    font-size: 15px;
+  }
+
+  .guessSubmit {
+    font-size: 15px;
+  }
+}
